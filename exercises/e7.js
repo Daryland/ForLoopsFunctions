@@ -5,10 +5,18 @@
 
 export function getClientWithLeastBalance(array) {
   // Your code goes here...
-  const filtered = array.filter((account) => account.balance > 0);
-  const sorted = filtered.sort((a, b) => a.balance - b.balance);
-  const lowestBalance = sorted[0];
-  return [{ id: lowestBalance.id, name: lowestBalance.name, balance: lowestBalance.balance }];
+  let arr = [];
+    let lowestBalance = array[0].balance;
+
+  for (let i = 1; i < array.length; i++) {
+    let currentAccount = array[i];
+    
+    if(currentAccount.balance > 0 && currentAccount.balance < lowestBalance) {
+			arr.push(currentAccount);
+    } 
+  }
+  
+ return arr; 
 }
 
 // === TEST YOURSELF ===

@@ -7,15 +7,16 @@
 export function getAllClientNames(array) {
   // Your code goes here...
   
-  const name = array.map((bankAccounts) => bankAccounts.clientName);
-  return name;
+  const names = array.map((bankAccounts) => bankAccounts.name);
+  return names;
   
 }
 
 import { bankAccounts } from './data/data.js';
 
 console.log(bankAccounts);
-console.log(getAllClientNames(bankAccounts)); // ['Susan', 'Morgan', 'Joshua', 'Candy', 'Phil']
+console.log(getAllClientNames(bankAccounts)); 
+console.log(DataView)
 
 
 // === TEST YOURSELF ===
